@@ -1,0 +1,157 @@
+/* การตั้งค่าสีและฟอนต์ */
+:root {
+    --pink-light: #FFD1DC;
+    --pink-dark: #FFB6C1;
+    --cream: #FFFDD0;
+    --white: #FFFFFF;
+    --brown: #8B4513;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Itim', cursive; }
+
+body {
+    background-color: var(--pink-light);
+    /* ลายจุดแพทเทิร์นสุดคาวาอี้ */
+    background-image: radial-gradient(var(--pink-dark) 2px, transparent 2px);
+    background-size: 30px 30px;
+    color: var(--brown);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Nav (ขอบลูกไม้) */
+.header {
+    background-color: var(--white);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+    border-bottom: 5px dotted var(--pink-dark);
+}
+
+.logo { font-size: 28px; font-weight: bold; cursor: pointer; color: var(--pink-dark); }
+.icon-bounce { display: inline-block; animation: bounce 2s infinite; }
+
+.nav-links button {
+    background: var(--cream);
+    border: 2px solid var(--pink-dark);
+    color: var(--brown);
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.nav-links button:hover { background: var(--pink-dark); color: var(--white); }
+
+/* Layout & Cards */
+.container { flex-grow: 1; max-width: 1000px; margin: 30px auto; padding: 0 15px; width: 100%; }
+.page-section { display: none; animation: fadeIn 0.5s ease-in-out; }
+.page-section.active { display: block; }
+
+.kawaii-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 30px;
+    border: 3px dashed var(--pink-dark);
+    box-shadow: 0 8px 15px rgba(255, 182, 193, 0.3);
+    margin-bottom: 20px;
+}
+
+/* Typography & Utilities */
+.title { font-size: 24px; margin-bottom: 15px; color: var(--brown); }
+.text-pink { color: var(--pink-dark); }
+.center-text { text-align: center; }
+.mt-1 { margin-top: 10px; } .mt-2 { margin-top: 20px; }
+.hidden { display: none !important; }
+.text-red { color: red; font-size: 14px; }
+
+/* Rate Boxes */
+.rate-box-container { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;}
+.rate-box {
+    flex: 1; min-width: 280px;
+    background: var(--cream);
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid var(--pink-light);
+}
+.rate-box.dashed { border-style: dashed; border-color: var(--pink-dark); }
+.rate-box ul { list-style: none; padding-left: 10px; margin-top: 10px; }
+.rate-box li { margin-bottom: 5px; }
+
+/* Gallery & Images */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+.work-item { background: var(--white); border: 2px solid var(--pink-light); border-radius: 20px; padding: 15px; text-align: center; }
+.image-wrapper { position: relative; overflow: hidden; border-radius: 15px; margin-bottom: 10px; }
+.image-wrapper img { width: 100%; height: 180px; object-fit: cover; border-radius: 15px; transition: transform 0.3s; }
+.image-wrapper img.zoomable { cursor: zoom-in; }
+.image-wrapper img.zoomable:hover { transform: scale(1.05); }
+
+/* Buttons & Inputs */
+.btn-kawaii {
+    background: var(--pink-dark);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 100%;
+}
+.btn-kawaii:hover { background: var(--pink-light); color: var(--brown); }
+
+.kawaii-input {
+    width: 100%; padding: 10px; border-radius: 15px;
+    border: 2px solid var(--pink-light); outline: none;
+    font-size: 16px;
+}
+.kawaii-input:focus { border-color: var(--pink-dark); }
+
+/* Admin Features */
+.admin-login-btn {
+    position: fixed; bottom: 20px; right: 20px;
+    background: var(--white); color: var(--pink-dark);
+    border: 2px dashed var(--pink-dark); border-radius: 50%;
+    width: 50px; height: 50px; font-size: 20px; cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000;
+}
+.admin-edit-btn {
+    position: absolute; top: 10px; right: 10px;
+    background: rgba(255, 255, 255, 0.9); color: var(--brown);
+    border: none; padding: 5px 10px; border-radius: 10px;
+    cursor: pointer; display: none; /* ซ่อนไว้ก่อน ถ้าเป็นแอดมินถึงจะโชว์ */
+}
+body.is-admin .admin-edit-btn { display: block; }
+body.is-admin .admin-login-btn { background: var(--pink-dark); color: var(--white); }
+
+/* Modals */
+.modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); backdrop-filter: blur(5px);
+    display: flex; justify-content: center; align-items: center; z-index: 2000;
+}
+.image-modal-bg { background: rgba(0,0,0,0.8); }
+.modal-content { max-width: 400px; width: 90%; text-align: center; }
+#zoomed-image { max-width: 90%; max-height: 90vh; border-radius: 20px; border: 5px solid var(--white); }
+.close-btn {
+    position: absolute; top: 10px; right: 15px; font-size: 24px;
+    cursor: pointer; color: var(--brown);
+}
+.image-modal-bg .close-btn { color: white; top: 20px; right: 30px; font-size: 40px; }
+
+/* Footer */
+.footer { background: var(--white); text-align: center; padding: 30px; border-top: 5px dotted var(--pink-dark); margin-top: auto; }
+.social-links a { margin: 0 10px; color: #1877F2; text-decoration: none; font-size: 18px; font-weight: bold; }
+.social-links a.line { color: #00B900; }
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }

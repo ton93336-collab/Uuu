@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NONIOAEY 🌸 - รับทำป้ายขายไอดี, ทำเว็บร้าน</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo" onclick="changePage('home')">NONIOAEY <span class="icon-bounce">🌸</span></div>
+        <nav class="nav-links">
+            <button onclick="changePage('home')">หน้าแรก</button>
+            <button onclick="changePage('web-design')">งานเว็บ</button>
+            <button onclick="changePage('id-banner')">ป้ายไอดี</button>
+            <button onclick="changePage('decor')">บล็อกป้าย</button>
+            <button onclick="changePage('faq')">FAQ</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="home" class="page-section active">
+            <div class="kawaii-card center-text relative">
+                <h1 class="main-title">💖 NONIOAEY 💖</h1>
+                <p class="slogan">" รับทำป้ายขายไอดี , ทำเว็บร้าน , ปล่อยเช่ารหัส , อื่นๆ "</p>
+                <div class="emoji-decor">🍥🍓🍭</div>
+            </div>
+        </section>
+
+        <section id="web-design" class="page-section hidden">
+            <div class="kawaii-card">
+                <h2 class="title"><i class="fa-solid fa-laptop-code text-pink"></i> งานเว็บ</h2>
+                <p class="description">รับทำเว็บไซต์ลิงค์ร้าน มีทั้งเทมเพลตให้เลือกเเละงานสั่งทำพิเศษ สอบถามได้ราคาเริ่มต้นที่ 69 บาท</p>
+                
+                <div class="rate-box-container">
+                    <div class="rate-box">
+                        <h3><i class="fa-solid fa-tag"></i> เรทราคาเว็บ</h3>
+                        <ul>
+                            <li>เว็บโอนเงิน <b>69</b> บาท</li>
+                            <li>เว็บตัวอย่างผลงาน <b>109</b> บาท</li>
+                            <li>เว็บรายละเอียดต่างๆ <b>159</b> บาท</li>
+                            <li>เว็บตัวอย่าง + รายละเอียด <b>209</b> บาท</li>
+                        </ul>
+                    </div>
+                    <div class="rate-box dashed">
+                        <h3><i class="fa-solid fa-plus-circle"></i> ราคาบวกเพิ่ม</h3>
+                        <ul>
+                            <li>เเก้ฟรี 1 ครั้งก่อนส่งลิงค์ (หลังส่งแก้จุดละ 5 บ.)</li>
+                            <li>รูปที่ 1-3 ใส่ฟรี (เพิ่มรูปละ 10 บ.)</li>
+                            <li>รองาน 4-8 ชม. (คิวเยอะจะแจ้งก่อน)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="center-text title mt-2">✨ ตัวอย่างงาน ✨</h3>
+                <div class="gallery-grid">
+                    <div class="work-item">
+                        <div class="image-wrapper">
+                            <img src="https://via.placeholder.com/300x150/FFFDD0/FFB6C1?text=รูปตัวอย่าง" id="img-web-1" alt="งานเว็บ 1">
+                            <button class="admin-edit-btn" onclick="triggerUpload('img-web-1')"><i class="fa-solid fa-pen"></i> แก้ไขรูป</button>
+                        </div>
+                        <h4>เว็บโอนเงิน 69.-</h4>
+                        <button class="btn-kawaii" onclick="openLinkModal('เว็บโอนเงิน 69.-', 'https://example.com/web1')">ดูตัวอย่าง</button>
+                    </div>
+                    <div class="work-item">
+                        <div class="image-wrapper">
+                            <img src="https://via.placeholder.com/300x150/FFFDD0/FFB6C1?text=รูปตัวอย่าง" id="img-web-2" alt="งานเว็บ 2">
+                            <button class="admin-edit-btn" onclick="triggerUpload('img-web-2')"><i class="fa-solid fa-pen"></i> แก้ไขรูป</button>
+                        </div>
+                        <h4>เว็บผลงาน 109.-</h4>
+                        <button class="btn-kawaii" onclick="openLinkModal('เว็บผลงาน 109.-', 'https://example.com/web2')">ดูตัวอย่าง</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="id-banner" class="page-section hidden">
+            <div class="kawaii-card">
+                <h2 class="title"><i class="fa-solid fa-palette text-pink"></i> ป้ายไอดี</h2>
+                <p class="description">รับทำป้ายขายไอดี</p>
+                
+                <div class="rate-box-container">
+                    <div class="rate-box">
+                        <h3><i class="fa-solid fa-star"></i> Skin Rate</h3>
+                        <ul>
+                            <li>1 - 100 สกิน ﹕สกินละ <b>0.50</b></li>
+                            <li>100+ สกิน ﹕สกินละ <b>1.00</b></li>
+                        </ul>
+                        <h3 class="mt-1"><i class="fa-solid fa-shapes"></i> Others</h3>
+                        <ul>
+                            <li>หัวป้าย ﹕ <b>35.-</b></li>
+                            <li>ป้ายไฟ ﹕ <b>2.-</b> / ชิ้น</li>
+                            <li>ประดับ ﹕ <b>0.50</b> / ชิ้น</li>
+                        </ul>
+                    </div>
+                    <div class="rate-box dashed">
+                        <h3><i class="fa-solid fa-clock"></i> ข้อตกลง</h3>
+                        <ul>
+                            <li>เเก้ฟรี 1 ครั้งก่อนส่งงาน (หลังส่งแก้จุดละ 5 บ.)</li>
+                            <li>รองาน 4-8 ชม. (หากคิวเยอะจะแจ้งก่อน)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="center-text title mt-2">✨ ตัวอย่างงานป้าย ✨</h3>
+                <div class="gallery-grid">
+                    <div class="work-item">
+                        <div class="image-wrapper">
+                            <img src="https://via.placeholder.com/300x300/FFFDD0/FFB6C1?text=คลิกขยาย" id="img-banner-1" alt="ป้าย 1" class="zoomable" onclick="openImageModal(this.src)">
+                            <button class="admin-edit-btn" onclick="triggerUpload('img-banner-1')"><i class="fa-solid fa-pen"></i> แก้ไขรูป</button>
+                        </div>
+                        <h4>ป้ายสไตล์น่ารัก</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faq" class="page-section hidden">
+            <div class="kawaii-card">
+                <h2 class="title center-text"><i class="fa-solid fa-circle-question text-pink"></i> ข้อสงสัย (FAQ)</h2>
+                <div class="faq-item">
+                    <h4>Q: สั่งงานผ่านช่องทางไหน?</h4>
+                    <p>A: สามารถติดต่อได้ทาง Facebook หรือ Line ด้านล่างเว็บเลยค่ะ 💕</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q: วิธีสั่งซื้อต้องทำยังไง?</h4>
+                    <p>A: 1. บรีฟงานที่ต้องการ 2. โอนเงิน 3. รอรับงานสวยๆ ได้เลยค่ะ</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <h3>ติดต่อเรา <i class="fa-solid fa-heart text-pink"></i></h3>
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/1De6NiueGU/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="https://line.me/ti/p/xnh050s5VP" target="_blank" class="line"><i class="fa-brands fa-line"></i> Line</a>
+        </div>
+        <p class="copyright">design. @NONIOAEY 🌸</p>
+    </footer>
+
+    <button class="admin-login-btn" onclick="openAdminModal()"><i class="fa-solid fa-key"></i></button>
+
+    <div id="link-modal" class="modal hidden">
+        <div class="modal-content kawaii-card relative">
+            <span class="close-btn" onclick="closeModal('link-modal')">&times;</span>
+            <h3 id="link-title" class="title">ชื่องาน</h3>
+            <p>คลิกที่ปุ่มด้านล่างเพื่อไปยังลิงก์ตัวอย่างค่ะ</p>
+            <a id="link-url" href="#" target="_blank" class="btn-kawaii mt-1" style="display:inline-block;">ไปที่ลิงก์ <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+    </div>
+
+    <div id="image-modal" class="modal hidden image-modal-bg">
+        <span class="close-btn" onclick="closeModal('image-modal')">&times;</span>
+        <img id="zoomed-image" src="" alt="ขยายรูป">
+    </div>
+
+    <div id="admin-modal" class="modal hidden">
+        <div class="modal-content kawaii-card relative">
+            <span class="close-btn" onclick="closeModal('admin-modal')">&times;</span>
+            <h3 class="title"><i class="fa-solid fa-lock text-pink"></i> เข้าสู่ระบบแอดมิน</h3>
+            <input type="password" id="admin-password" placeholder="ใส่รหัสผ่าน..." class="kawaii-input">
+            <button class="btn-kawaii mt-1" onclick="checkPassword()">ยืนยัน</button>
+            <p id="admin-error" class="text-red hidden mt-1">รหัสผ่านไม่ถูกต้อง!</p>
+        </div>
+    </div>
+
+    <input type="file" id="image-uploader" accept="image/*" class="hidden" onchange="handleImageUpload(event)">
+
+    <script src="script.js"></script>
+</body>
+</html>
